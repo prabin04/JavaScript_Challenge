@@ -5,3 +5,16 @@
  4. Pass the preTaxTotal value to a getTaxedTotal function that returns the value with tax.
  5. Log each value from the 3 functions out. 
 */
+
+function getUserCredentials(firstName, lastName, email) {
+    return `${firstName} ${lastName} | ${email}`
+}
+
+const userCredentials = getUserCredentials('Prabin', 'Parajuli', 'prabin.b9@gmail.com');
+console.log(userCredentials)
+
+const cartItems = [
+    { quantity: 1, price: 5 },
+    { quantity: 3, price: 4 },
+    { quantity: 10, price: 1}
+];
