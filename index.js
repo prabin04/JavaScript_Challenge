@@ -1,3 +1,5 @@
+// Challenge: Checkout
+
 /*
  1. Go through the full checkout process.
  2. Use getUserCredentials provided that returns the first name, last name and concats with email.  
@@ -22,12 +24,20 @@ function getPreTaxTotal(cartItems) {
     return total;
 }
 
-
 const cartItems = [
     { quantity: 1, price: 5 },
     { quantity: 3, price: 4 },
     { quantity: 10, price: 1}
 ];
 
-//console.log(userCredentials);
-console.log(getPreTaxTotal);
+const preTaxTotal = getPreTaxTotal(cartItems);
+
+function getTaxedTotal(preTaxTotal) {
+    return preTaxTotal *= 1.08;
+}
+
+const finalTaxedTotal = getTaxedTotal(preTaxTotal);
+
+console.log(userCredentials)
+console.log(preTaxTotal);
+console.log(finalTaxedTotal);
