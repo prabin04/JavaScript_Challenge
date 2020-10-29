@@ -11,10 +11,23 @@ function getUserCredentials(firstName, lastName, email) {
 }
 
 const userCredentials = getUserCredentials('Prabin', 'Parajuli', 'prabin.b9@gmail.com');
-console.log(userCredentials)
+
+function getPreTaxTotal(cartItems) {
+    let total = 0;
+    
+    for(let cartItem of cartItems) {
+        total += cartItem.quantity * cartItem.price;
+    }
+    
+    return total;
+}
+
 
 const cartItems = [
     { quantity: 1, price: 5 },
     { quantity: 3, price: 4 },
     { quantity: 10, price: 1}
 ];
+
+//console.log(userCredentials);
+console.log(getPreTaxTotal);
